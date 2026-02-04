@@ -482,8 +482,9 @@ function generateFloorTiles() {
 // ═══════════════════════════════════════════════════════════════════════════
 // WRITE ALL SPRITES
 // ═══════════════════════════════════════════════════════════════════════════
-const outDir = '/home/claude/luchador-lib/src/assets/sprites/';
-const tileDir = '/home/claude/luchador-lib/src/assets/tilemaps/';
+const path = require('path');
+const outDir = path.join(__dirname, 'src/assets/sprites/');
+const tileDir = path.join(__dirname, 'src/assets/tilemaps/');
 
 fs.writeFileSync(outDir + 'luchador.png', generateLuchadorSheet());
 fs.writeFileSync(outDir + 'books.png', generateBooksSheet());
